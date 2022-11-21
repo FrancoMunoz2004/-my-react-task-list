@@ -1,0 +1,49 @@
+#root {
+height: 100%;
+width: 100%;
+}
+.container {
+  width: 30vw;
+  height: 50vh;
+  margin: auto;
+  border-radius: 15px;
+  background-color: rgb(63, 111, 184);
+}
+@media (min-width: 400px) {
+  .container {
+    width: 90vw;
+    height: 50vh;
+    margin: auto;
+    border-radius: 15px;
+    background-color: rgb(63, 111, 184);
+  }
+
+  .Header {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    width: 40vw;
+    height: 50vh;
+    margin: auto;
+    border-radius:15px;
+    background-color:  rgb(63, 111, 184);
+  }
+
+  .Header {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+      width: 20vw;
+      height: 50vh;
+      margin: auto;
+      border-radius: 15px;
+      background-color: rgb(63, 111, 184);
+    }
+    .Header {
+      margin-bottom: 15px;
+    }
+}
