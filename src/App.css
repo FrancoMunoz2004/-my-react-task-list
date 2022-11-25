@@ -1,0 +1,48 @@
+#root {
+height: 100%;
+width: 100%;
+}
+.container {
+  width: 30vw;
+  height: auto;
+  margin: auto;
+  border-radius: 15px;
+  color: #000000;
+  border: 1px solid rgb(0, 0, 0);
+  background-color:rgb(255, 255, 255)
+}
+@media (min-width: 400px) {
+  .container {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+  }
+
+  .Header {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 800px) {
+  .container {
+    width: 40vw;
+    height: auto;
+    margin: auto;
+    border-radius:15px;
+  }
+
+  .Header {
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+      width: 20vw;
+      height: auto;
+      margin: auto;
+      border-radius: 15px;
+    }
+    .Header {
+      margin-bottom: 15px;
+    }
+}
