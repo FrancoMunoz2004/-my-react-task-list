@@ -2,6 +2,7 @@ import { BiTrash } from "react-icons/bi";
 import { AiOutlineForm } from "react-icons/ai";
 import { useState } from "react";
 import "./List.css";
+import { Box, Button, Center, Input } from "@chakra-ui/react";
 
 //INICIA LISTA
 export const List = ({ task }) => {
@@ -86,34 +87,61 @@ export const List = ({ task }) => {
   return (
     <>
       <label className={claseLabel}>
-        <div className="list">
-          <div className="input">
-            {/*NUESTRO INPUT*/}
-            <input
+        <Box h="5vh" display="flex" justifyContent="center">
+          <Center>
+            <Input
+              cursor="pointer"
               type="checkbox"
               onClick={handleOpen}
               checked={marcado}
               onChange={tareaHecha}
               className="checkbox-round"
               value="first-checkbox"
-            ></input>
-            <p>{task.name}</p>
-            <div className="description">
-            <b>{task.description}</b>
+            />
+            <Box
+              gap="10px"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <p>{task.name}</p>
 
-            </div>
-          </div>
-          <div className="iconos">
+              <b>{task.description}</b>
+            </Box>
+          </Center>
+          <Box
+            w="50%"
+            display="flex"
+            justifyContent="flex-end;"
+            alignItems="center"
+          >
             {/* ELIMINAR */}
-            <button onClick={handleOnClick}>
-              <BiTrash className="icono2" />
-            </button>
+            <Button
+              onClick={handleOnClick}
+              bg="none"
+              colorScheme="teal"
+              variant="outline"
+              border="none"
+              cursor="pointer"
+              h="22px"
+            >
+              <BiTrash color="red" />
+            </Button>
             {/*EDITAR*/}
-            <button onClick={handleOnSubmit}>
-              <AiOutlineForm className="icono1" />
-            </button>
-          </div>
-        </div>
+            <Button
+              onClick={handleOnSubmit}
+              bg="none"
+              colorScheme="teal"
+              variant="outline"
+              border="none"
+              cursor="pointer"
+              h="22px"
+              
+            >
+              <AiOutlineForm color="green" />
+            </Button>
+          </Box>
+        </Box>
       </label>
       {/*DESPLIEGUE MENSAJE*/}
       {abrir ? <h5 className={claseTitulo}>Realizada</h5> : null}
@@ -128,9 +156,9 @@ export const List = ({ task }) => {
               setList2(e.target.value);
             }}
           ></input>
-          <button type="submit" className="edi">
+          <Button type="submit" className="edi">
             Editar
-          </button>
+          </Button>
         </form>
       ) : null}
     </>
